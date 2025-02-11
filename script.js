@@ -42,12 +42,15 @@ function resizeYesButton() {
 
 function generateMessage(noCount) {
   const messages = [
-    "No",
-    "Are you sure?",
-    "Pookie please",
-    "Don't do this to me :(",
-    "You're breaking my heart",
-    "I'm gonna cry...",
+    "haboooo",
+    "sure ka?",
+    "sure ka gayud?",
+    "sure na sure na sure kana gayud sana?",
+    "isad pa baga.",
+    "sureness?",
+    "habo ko na.",
+    "mamalason ka.",
+    "as in mamalason ka talaga.",
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
@@ -55,7 +58,7 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-  catImg.src = `img/cat-${image}.jpg`;
+  catImg.src = `happy-cat.gif`;
 }
 
 function updateNoButtonText() {
