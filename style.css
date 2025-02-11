@@ -103,13 +103,10 @@ body {
     }
 }
 
-.heart-1 { left: 5%; animation-duration: 3s; }
-.heart-2 { left: 15%; animation-duration: 2.5s; }
-.heart-3 { left: 25%; animation-duration: 2.3s; }
-.heart-4 { left: 35%; animation-duration: 2.9s; }
-.heart-5 { left: 45%; animation-duration: 2.6s; }
-.heart-6 { left: 55%; animation-duration: 2.4s; }
-.heart-7 { left: 65%; animation-duration: 2.7s; }
+.heart {
+    left: calc(100% * var(--random-x));
+    animation-duration: calc(3s + var(--random-duration) * 2s);
+}
 
 @media only screen and (max-width: 1025px) {
     html {
