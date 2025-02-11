@@ -16,8 +16,6 @@ yesButton.addEventListener("click", handleYesClick);
 noButton.addEventListener("click", function () {
   if (play) {
     noCount++;
-    const imageIndex = Math.min(noCount, MAX_IMAGES);
-    changeImage(imageIndex);
     resizeYesButton();
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
@@ -57,8 +55,10 @@ function generateMessage(noCount) {
   return messages[messageIndex];
 }
 
-function changeImage(image) {
-  catImg.src = `happy-cat.gif`;
+function changeImage(response) {
+  if (response === "yes") {
+    catImg.src = "happy-cat.gif";
+  }
 }
 
 function updateNoButtonText() {
