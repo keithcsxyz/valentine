@@ -24,6 +24,10 @@
     <div class="heart heart-5"></div>
     <div class="heart heart-6"></div>
     <div class="heart heart-7"></div>
+    <div class="heart heart-8"></div>
+    <div class="heart heart-9"></div>
+    <div class="heart heart-10"></div>
+
     <main class="container">
       <img class="cat-img" src="pussy-cat.gif" alt="pic" />
       <p class="title">Will you be my Valentine?</p>
@@ -34,6 +38,11 @@
     </main>
 
     <script type="module" src="script.js"></script>
-    <script src="//code.tidio.co/kcnpf0h9cmsr8nr1e2cd5g3qjwz3rkvc.js" async></script>
+    <script>
+      document.querySelectorAll('.heart').forEach(heart => {
+        heart.style.setProperty('--random-x', Math.random());
+        heart.style.setProperty('--random-duration', Math.random());
+      });
+    </script>
   </body>
 </html>
