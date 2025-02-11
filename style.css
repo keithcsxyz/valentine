@@ -11,7 +11,7 @@ html {
 body {
     background-color: #ae8e9b;
     font-family: "Protest Riot", sans-serif;
-    overflow: hidden;
+    overflow-y: auto;
     position: relative;
 }
 
