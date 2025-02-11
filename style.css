@@ -2,63 +2,158 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html {
+}
+
+html {
     font-size: 62.5%;
-  }
-  
-  body {
+}
+
+body {
     background-color: #ae8e9b;
     font-family: "Protest Riot", sans-serif;
-  }
-  
-  .container {
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
     height: 100vh;
     margin: 0 auto;
-  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.title {
     font-size: 3.6rem;
     color: #ff0000;
-    text-align: center;
     margin-bottom: 2rem;
-  }
-  
-  .buttons {
+}
+
+.buttons {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  
     gap: 1rem;
-  }
-  
-  .btn {
+}
+
+.btn {
     padding: 1.5rem 2.5rem;
     border: none;
     border-radius: 4px;
-  
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
     display: inline-block;
-  }
-  
-  .btn--yes {
+}
+
+.btn--yes {
     background-color: #40c057;
-  }
-  
-  .btn--no {
+}
+
+.btn--no {
     background-color: #f03e3e;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
-  }
+}
+
+.heart {
+    position: absolute;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation: drop 5s infinite ease-in;
+}
+
+.heart::after,
+.heart::before {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+@keyframes drop {
+    0% {
+        top: -50px;
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+.heart-1 { left: 5%; animation-duration: 3s; }
+.heart-2 { left: 15%; animation-duration: 2.5s; }
+.heart-3 { left: 25%; animation-duration: 2.3s; }
+.heart-4 { left: 35%; animation-duration: 2.9s; }
+.heart-5 { left: 45%; animation-duration: 2.6s; }
+.heart-6 { left: 55%; animation-duration: 2.4s; }
+.heart-7 { left: 65%; animation-duration: 2.7s; }
+
+@media only screen and (max-width: 1025px) {
+    html {
+        font-size: 50%;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 45%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .heart {
+        height: 25px;
+        width: 25px;
+    }
+
+    .heart::after {
+        width: 25px;
+        height: 25px;
+        left: 12.5px;
+    }
+
+    .heart::before {
+        width: 25px;
+        height: 25px;
+        top: -12.5px;
+    }
+}
